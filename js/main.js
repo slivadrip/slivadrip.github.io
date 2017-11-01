@@ -124,7 +124,7 @@ function generateCard(data){
     var desc = data.description;
     var imgUrl = data.previewUrl;
     var demoUrl = data.demoUrl;
-    return ('<li class="card animated zoomIn"><div class="card-media"><img src='+imgUrl+' alt="#" /></div><div class="card-content"><h4>'+title+'</h4><p>'+desc+'</p></div><div class="card-actions"><a target="_blank" href='+demoUrl+' class="view-demo">View Demo</a></div></li>');
+    return ('<li class="card animated zoomIn"><div class="card-media"><img src='+imgUrl+' alt="#" /></div><div class="card-content"><h4>'+title+'</h4><p>'+desc+'</p></div><div class="card-actions"><a target="_blank" href='+demoUrl+' class="view-demo">Ver Projeto</a></div></li>');
   }
   function renderToDom(data){
     data.forEach(function(item){
