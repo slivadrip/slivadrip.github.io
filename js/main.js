@@ -135,7 +135,7 @@ function generateCard(data){
     });
   }
   //for intial rendering
-  renderToDom(frontend);
+  renderToDom(backend);
 
   function clearDom(){
     $('.js-list').empty();
