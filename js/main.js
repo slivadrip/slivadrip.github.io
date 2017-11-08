@@ -30,6 +30,14 @@ var data = [
     demoUrl:"https://github.com/slivadrip/patrimonio",
     previewUrl:"https://github.com/slivadrip/patrimonio/raw/master/patrimonio-api/docs/patrimonio.png",
     category:"backend"
+  },
+  {
+    id:1,
+    title:"Modelo de Portifolio Simples ",
+    description:"Modelo de Portifolio Simples online",
+    demoUrl:"https://github.com/slivadrip/Modelo-de-Portifolio",
+    previewUrl:"https://raw.githubusercontent.com/slivadrip/Modelo-de-Portifolio/master/assets/img/index.PNG",
+    category:"frontend"
   }
  
 ];
