@@ -31,6 +31,14 @@ var data = [
     previewUrl:"https://github.com/slivadrip/patrimonio/raw/master/patrimonio-api/docs/patrimonio.png",
     category:"backend"
   },
+   {
+    id:19,
+    title:"Sisclod",
+    description:"Sistema de controle de clínica Odontologica .",
+    demoUrl:"https://github.com/slivadrip/Sisclod",
+    previewUrl:"https://raw.githubusercontent.com/slivadrip/Sisclod/master/l.PNG",
+    category:"backend"
+  },
   {
     id:1,
     title:"Modelo de Portifolio Simples ",
