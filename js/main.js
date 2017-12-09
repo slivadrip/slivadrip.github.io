@@ -1,12 +1,12 @@
 $(document).ready(function(){
   $.backstretch([
-          "https://res.cloudinary.com/vinaypuppal/image/upload/c_scale,w_1024/v1464896760/photo-1428223501723-d821c5d00ca3_knl5ki.jpg",
-          "https://res.cloudinary.com/vinaypuppal/image/upload/c_scale,w_1024/v1464896839/photo-1432888498266-38ffec3eaf0a_ukva1r.jpg"
-      ],{
-          duration:30000,
-          fade: 'slow'
-  });
-var data = [
+    "https://res.cloudinary.com/vinaypuppal/image/upload/c_scale,w_1024/v1464896760/photo-1428223501723-d821c5d00ca3_knl5ki.jpg",
+    "https://res.cloudinary.com/vinaypuppal/image/upload/c_scale,w_1024/v1464896839/photo-1432888498266-38ffec3eaf0a_ukva1r.jpg"
+    ],{
+      duration:30000,
+      fade: 'slow'
+    });
+  var data = [
   {
     id:23,
     title:"Speed System",
@@ -24,14 +24,6 @@ var data = [
     category:"backend"
   },
   {
-    id:0,
-    title:"Gestão Patrimonio",
-    description:"Sistema feito em angular para Gestão de patrimonio.",
-    demoUrl:"https://github.com/slivadrip/patrimonio",
-    previewUrl:"https://github.com/slivadrip/patrimonio/raw/master/patrimonio-api/docs/patrimonio.png",
-    category:"backend"
-  },
-   {
     id:19,
     title:"Sisclod",
     description:"Sistema de controle de clínica Odontologica .",
@@ -40,6 +32,15 @@ var data = [
     category:"backend"
   },
   {
+    id:0,
+    title:"Gestão Patrimonio",
+    description:"Sistema feito em angular para Gestão de patrimonio.",
+    demoUrl:"https://github.com/slivadrip/patrimonio",
+    previewUrl:"https://github.com/slivadrip/patrimonio/raw/master/patrimonio-api/docs/patrimonio.png",
+    category:"backend"
+  },
+
+  {
     id:1,
     title:"Modelo de Portifolio Simples ",
     description:"Modelo de Portifolio Simples online",
@@ -47,8 +48,8 @@ var data = [
     previewUrl:"https://raw.githubusercontent.com/slivadrip/Modelo-de-Portifolio/master/assets/img/index.PNG",
     category:"frontend"
   }
- 
-];
+  
+  ];
 
   var frontend = data.filter(function(item){
     return item.category === 'frontend';
@@ -62,7 +63,7 @@ var data = [
     return item.category === 'react';
   });
 
-   var meteor = data.filter(function(item){
+  var meteor = data.filter(function(item){
     return item.category === 'meteor';
   });
 
@@ -71,7 +72,7 @@ var data = [
       $(el).removeClass('active');
     }
 
-    });
+  });
   }
   function removeOpenClass(){
     $('.container').each(function(i,el){
@@ -99,7 +100,7 @@ var data = [
     $('.center').animate({
       opacity:'1'
     },500);
-        removeActiveClass();
+    removeActiveClass();
     $('.center').find('.js-open-about').addClass('active');
   });
 
@@ -112,7 +113,7 @@ var data = [
     $('.center').animate({
       opacity:'1'
     },500);
-        removeActiveClass();
+    removeActiveClass();
     $('.center').find('.js-open-works').addClass('active');
   });
 
@@ -135,7 +136,7 @@ var data = [
   //       loop: true
   //     });
 
-function generateCard(data){
+  function generateCard(data){
     var title = data.title;
     var desc = data.description;
     var imgUrl = data.previewUrl;
@@ -156,36 +157,36 @@ function generateCard(data){
   function clearDom(){
     $('.js-list').empty();
   }
- $('input[type=radio]').on('change',function(e){
-     switch(e.target.value){
-       case 'frontend':
-         clearDom();
-         renderToDom(frontend);
-         break;
-       case 'backend':
-         clearDom();
-         renderToDom(backend);
-         break;
-       case 'react':
-         clearDom();
-         renderToDom(react);
-         break;
-       case 'meteor':
-         clearDom();
-         renderToDom(meteor);
-         break;
-     }
-    });
+  $('input[type=radio]').on('change',function(e){
+   switch(e.target.value){
+     case 'frontend':
+     clearDom();
+     renderToDom(frontend);
+     break;
+     case 'backend':
+     clearDom();
+     renderToDom(backend);
+     break;
+     case 'react':
+     clearDom();
+     renderToDom(react);
+     break;
+     case 'meteor':
+     clearDom();
+     renderToDom(meteor);
+     break;
+   }
+ });
 
   if(document.createElement("p").style.flex===undefined){
-      $('.supported').hide();
-      $('.not-supported').show();
-      alert("Sorry your browser is not supported. Please Use Latest Browsers Like Chrome")
-   }
-
-   if(~navigator.userAgent.indexOf('UCBrowser') || ~navigator.userAgent.indexOf('Opera Mini')){
     $('.supported').hide();
     $('.not-supported').show();
     alert("Sorry your browser is not supported. Please Use Latest Browsers Like Chrome")
-   }
+  }
+
+  if(~navigator.userAgent.indexOf('UCBrowser') || ~navigator.userAgent.indexOf('Opera Mini')){
+    $('.supported').hide();
+    $('.not-supported').show();
+    alert("Sorry your browser is not supported. Please Use Latest Browsers Like Chrome")
+  }
 });
